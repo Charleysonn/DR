@@ -1,26 +1,48 @@
-DR - Diagnóstico Rápido
+DR - Device Reporter v3.2 Hyper-Optimized
 
-Ferramenta em C puro (C99) que faz um diagnóstico completo do hardware e sistema em segundos. Roda em Windows, Linux, macOS, FreeBSD, Android (Termux) e Raspberry Pi sem dependências.
+Coletor de hardware ultra-leve, rápido e portável. Construído do zero absoluto em C99 puro, sem dependências externas.
 
-O que ele coleta
-- Sistema Operacional, Uptime, IP Local
-- Placa-mãe (fabricante / modelo)
-- Processador e núcleos lógicos
-- Memória RAM total e disponível
-- Armazenamento (tipo SSD/HD, total e livre)
-- Placa de vídeo, Interfaces de rede, Áudio, Webcam, Bluetooth
-- Status da bateria
+Gera inventário completo do sistema em JSON com timestamp, pronto para ser usado como módulo de um projeto maior ou como programa independente.
 
-Saída
-Cria automaticamente a pasta DR relatorio e gera um arquivo JSON com data e hora.
+O que coleta
+- Placa-mãe
+- Tipo de armazenamento (HD, SSD, NVMe)
+- Webcam
+- Bluetooth
+- Outros dispositivos do sistema
 
-Como compilar
-Linux / macOS:
-gcc -Wall -Wextra -std=c99 DR.c -o dr
-./dr
+Portabilidade Total
+- Sistemas: Windows 7/10/11, Linux, macOS, Android via Termux, Servidores
+- Arquiteturas: x86, x64, ARM, ARM64
+- Compiladores: GCC, Clang, MSVC, TCC
 
-Windows:
-gcc -Wall -Wextra -std=c99 DR.c -o DR.exe
+Manual de Instalação Completo
 
-Autor
-Charleysonn - Versão 3.2-Hyper-Optimized
+*1. Baixar:*
+`git clone https://github.com/Charleysonn/DR.git` e `cd DR`
+
+*2. Compilar e Executar por Sistema:*
+
+_Windows (10/11):_
+`gcc DR.c -o DR.exe` depois `DR.exe`
+
+_Linux Desktop (Ubuntu, Debian, Fedora, Arch):_
+`gcc DR.c -o DR` depois `./DR`
+
+_macOS:_
+`clang DR.c -o DR` depois `./DR`
+
+_Servidores (Windows Server / Linux Server Ubuntu, CentOS, Debian):_
+Mesmo comando do Desktop, sem interface gráfica. 
+Linux Server: `gcc DR.c -o DR && ./DR`
+Windows Server: `gcc DR.c -o DR.exe` e roda
+
+_Android (Termux):_
+`pkg install clang` depois `clang DR.c -o DR` e `./DR`
+
+_Raspberry Pi / ARM:_
+`gcc DR.c -o DR` e `./DR` (mesmo do Linux)
+
+Vai gerar um .json com tudo.
+
+Desenvolvido por Charleysonn - Serra, ES
