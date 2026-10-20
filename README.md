@@ -1,4 +1,4 @@
-DR - Device Reporter v3.3 Hyper-Optimized
+DR - Device Reporter v1.0
 
 Coletor de hardware ultra-leve, rápido e portável. Construído do zero absoluto em C99 puro, sem dependências externas.
 
